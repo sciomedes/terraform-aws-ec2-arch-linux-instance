@@ -41,6 +41,42 @@ For example, to get the latest s3-backed stable kernel version in `us-west-2`, t
 
 ```
 module "ec2_arch_linux" {
+  source = "git::https://github.com/sciomedes/terraform-aws-ec2-arch-linux-instance.git"
+
+  #------------------------------------------------------------------------
+  # instance details:
+  #------------------------------------------------------------------------
+  instance_type               = "t2.nano"   # AWS EC2 instance type
+  root_volume_size            = 8           # size of root volume in GB
+  associate_public_ip_address = true        # allocate a public IP
+  ec2_username                = "root"      # instance user name
+
+
+  #------------------------------------------------------------------------
+  # the following settings are region-specific
+  #------------------------------------------------------------------------
+  # ami details:
+  ami_id = "ami-d38d1a3f6586d9b65"
+  region = "us-west-2"
+
+  # private key used to connect to instance:
+  key_name       = "mykey"                   # name of key already uploaded to AWS region
+  key_directory  = "/home/username/.ssh/"    # local directory where corresponding key is stored
+
+  # up to five security groups are allowed for VPC:
+  vpc_security_group_ids      = ["sg-96b99dv0d5174baf1"]
+  subnet_id                   = "subnet-476b6vb6b24466301"
+
+
+  #------------------------------------------------------------------------
+  # tag resource:
+  #------------------------------------------------------------------------
+  tags = {
+    SomeTag   = "Arch Linux"
+    Terraform = "true"
+  }
+  #------------------------------------------------------------------------
+
 }
 ```
 
