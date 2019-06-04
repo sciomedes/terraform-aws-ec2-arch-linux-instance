@@ -56,6 +56,6 @@ variable "tags" {
 }
 
 variable "sshopts" {
-  description = ""
+  description = "SSH options used"
   default = "-o IdentitiesOnly=yes -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 }
