@@ -1,19 +1,19 @@
-# EC2 instance public IP:
 output "ip" {
+  description = "EC2 instance public IP"
   value = "${aws_instance.arch-linux-node.public_ip}"
 }
 
-# EC2 instance id:
 output "instance-id" {
+  description = "EC2 instance id"
   value = "${aws_instance.arch-linux-node.id}"
 }
 
-# availability zone info:
 output "az" {
+  description = "availability zone info"
   value = "${aws_instance.arch-linux-node.availability_zone}"
 }
 
-# root block device info:
 output "root-device-volume" {
+  description = "root block device info"
   value = "${aws_instance.arch-linux-node.root_block_device.0.volume_id}"
 }
