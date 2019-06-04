@@ -2,10 +2,23 @@
 
 ## Prerequisites
 At a minimum, you'll need to have [terraform](https://www.terraform.io) installed.
-Some of the steps offered in this README file also use 
-+ bash
+Some of the steps offered in this README file may also use the following software:
++ command line utilities:  bash, grep, sed, ...
 + [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) and 
 + [jq JSON processor](https://stedolan.github.io/jq/).
+
+![diagram][diagram]
+
+For this module to function, the following assumptions are made:
++ within the desired region, an existing VPC is supplied with an 
+  [internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
++ a subnet within that VPC has a route to the gateway
++ the VPC security group used is situated with a working 
+  [inbound rule](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
++ a working public key has been [imported to the region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws)
++ the corresponding private key is stored locally on the client machine.
+
+Later updates to this module may automate some of these prerequisites.
 
 
 ## AMI source
@@ -90,3 +103,4 @@ module "ec2_arch_linux" {
 
 [Uplink Labs]: https://www.uplinklabs.net/projects/arch-linux-on-ec2/
 [1]: https://wiki.archlinux.org/index.php/Arch_Linux_AMIs_for_Amazon_Web_Services
+[diagram]: aws-ec2-arch-linux-instance.png
