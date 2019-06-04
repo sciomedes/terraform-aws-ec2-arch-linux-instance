@@ -64,7 +64,7 @@ module "ec2_arch_linux" {
   # the following settings are region-specific
   #------------------------------------------------------------------------
   # ami details:
-  ami_id = "ami-d38d1a3f6586d9b65"
+  ami_id = "ami-09afa8e5aec9f9aa4"
   region = "us-west-2"
 
   # private key used to connect to instance:
