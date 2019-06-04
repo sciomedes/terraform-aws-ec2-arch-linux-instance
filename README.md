@@ -31,10 +31,18 @@ Usage for this script is
 ```
 ./get-uplink-arch-linux-ami.sh --root-device-type <s3 | ebs> --kernel <lts | stable> --region <REGION>
 ```
-For example, to get the latest s3-backed stable kernel version in `us-west-2`, the command is:
+For example, to get the latest ebs-backed lts kernel version in `us-west-2`, the command is:
 ```
-./get-uplink-arch-linux-ami.sh --root-device-type s3 --kernel stable --region us-west-2
+./get-uplink-arch-linux-ami.sh --root-device-type ebs --kernel lts --region us-west-2
 ```
+This should output to the following information to the screen:
+```
+Region = us-west-2
+RootDeviceType = ebs
+Kernel = lts
+AMI = ami-09afa8e5aec9f9aa4
+```
+Also, the AMI id should be saved to the file `arch-linux-ebs-lts-us-west-2.ami`.
 
 
 ## Usage
