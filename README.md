@@ -35,9 +35,9 @@ and cover the following configurations:
 + ebs hvm x86_64 stable
 + s3 hvm x86_64 stable
 
-For example, the 2019.05.13 release for instance running on root device type ebs with an LTS kernel is
-+ [	ami-0e30953f18f5628a3](
-https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0e30953f18f5628a3)
+For example, the 2019.05.13 AMI release for region `us-west-2` running an EBS root device type with an LTS kernel is
++ [ami-09afa8e5aec9f9aa4](
+https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-09afa8e5aec9f9aa4)
 
 A script for harvesting the latest release AMI is provided in 
 [get-uplink-arch-linux-ami.sh](get-uplink-arch-linux-ami.sh).
@@ -57,7 +57,7 @@ RootDeviceType = ebs
 Kernel = lts
 AMI = ami-09afa8e5aec9f9aa4
 ```
-Also, the AMI id should be saved to the file `arch-linux-ebs-lts-us-west-2.ami`.
+Subsequently, the AMI id will have been written to the file `arch-linux-ebs-lts-us-west-2.ami`.
 
 
 ## Usage
