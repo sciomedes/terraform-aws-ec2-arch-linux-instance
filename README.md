@@ -1,5 +1,7 @@
 # AWS EC2 Instance running Arch Linux module
 
+Terraform module that creates an Amazon EC2 instance running Arch Linux.
+
 ## Prerequisites
 At a minimum, you'll need to have [terraform](https://www.terraform.io) installed.
 Some of the steps offered in this README file may also use the following software:
