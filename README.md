@@ -114,5 +114,4 @@ MIT License. See [LICENSE](LICENSE) for full details.
 
 [Uplink Labs]: https://www.uplinklabs.net/projects/arch-linux-on-ec2/
 [1]: https://wiki.archlinux.org/index.php/Arch_Linux_AMIs_for_Amazon_Web_Services
-[diagram]: aws-ec2-arch-linux-instance.png
-![diagram](https://github.com/sciomedes/terraform-aws-ec2-arch-linux-instance/raw/master/aws-ec2-arch-linux-instance.png)
+[diagram]: https://github.com/sciomedes/terraform-aws-ec2-arch-linux-instance/raw/master/aws-ec2-arch-linux-instance.png
